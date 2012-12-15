@@ -16,11 +16,11 @@
     #define __has_extension __has_feature
 #endif
 
-#if __has_feature(objc_arc) && __clang_major__ >= 3
-    #define PGMIDI_ARC 1
-#else
+//#if __has_feature(objc_arc) && __clang_major__ >= 3
+  //  #define PGMIDI_ARC 1
+//#else
     #define PGMIDI_ARC 0
-#endif
+//#endif
 
 //==============================================================================
 #if PGMIDI_ARC

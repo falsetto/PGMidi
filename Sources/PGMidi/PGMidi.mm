@@ -117,7 +117,9 @@ BOOL IsNetworkSession(MIDIEndpointRef ref)
 // NOTE: Called on a separate high-priority thread, not the main runloop
 - (void) midiRead:(const MIDIPacketList *)pktlist
 {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     [delegate midiSource:self midiReceived:pktlist];
+    [pool drain];
 }
 
 static
